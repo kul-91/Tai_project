@@ -1,0 +1,33 @@
+# SentinelAI Python dependencies
+# Install with: pip install -r requirements.txt
+
+# ── Security / Core ──────────────────────────────────────────────────────────
+# (no extra packages; security/policy.py uses stdlib only)
+
+# ── Document ingestion ───────────────────────────────────────────────────────
+pypdf>=4.0.0
+python-docx>=1.1.0
+Pillow>=10.0.0           # image processing (required by pytesseract / OCR)
+
+# ── OCR (scanned PDF support) ─────────────────────────────────────────────────
+PyMuPDF>=1.24.0          # PDF rendering for OCR (import as 'fitz')
+pytesseract>=0.3.10      # Python wrapper for Tesseract OCR
+
+# NOTE: Tesseract must also be installed as a system package.
+# CachyOS / Arch Linux:
+#   sudo pacman -S tesseract tesseract-data-eng
+# Ubuntu / Debian:
+#   sudo apt install tesseract-ocr tesseract-ocr-eng
+# macOS (Homebrew):
+#   brew install tesseract
+
+# ── RAG / Embeddings ─────────────────────────────────────────────────────────
+sentence-transformers>=2.2.0
+faiss-cpu>=1.7.0
+numpy>=1.24.0
+
+# ── LLM (local via Ollama) ───────────────────────────────────────────────────
+ollama>=0.1.0
+
+# ── Test helpers ─────────────────────────────────────────────────────────────
+reportlab>=4.0.0         # create test PDFs in unit tests

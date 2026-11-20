@@ -1,0 +1,10 @@
+{
+  "venvPath": ".",
+  "venv": ".local_ai-env",
+  "include": [
+    "."
+  ],
+  "extraPaths": [
+    "."
+  ]
+}
